@@ -1,0 +1,8 @@
+LibraryID	LibraryModality	SubjectID	ConfirmedID	Usable
+reviewer_wgs_1	WGS	reviewer_donor_1	Yes	Yes
+reviewer_wgs_2	WGS	reviewer_donor_1	Yes	Yes
+reviewer_wgs_3	WGS	reviewer_donor_2	Yes	Yes
+reviewer_wgs_4	WGS	reviewer_donor_3	Yes	Yes
+reviewer_wgs_5	WGS	reviewer_donor_4	Yes	Yes
+reviewer_wgs_6	WGS		No	No
+reviewer_rna_1	bulkRNA	reviewer_donor_1	Yes	Yes

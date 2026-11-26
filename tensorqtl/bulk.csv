@@ -1,0 +1,11 @@
+sample_group,pc_name,cell_group
+bulk_postnatal,PC10,bulk_post
+pseudobulk_postnatal,PC5,ExN
+pseudobulk_postnatal,PC5,Glia
+pseudobulk_postnatal,PC5,InN
+pseudobulk_postnatal,PC5,NNC
+pseudobulk_prenatal,PC5,ExN
+pseudobulk_prenatal,PC5,Glia
+pseudobulk_prenatal,PC5,InN
+pseudobulk_prenatal,PC5,NNC
+

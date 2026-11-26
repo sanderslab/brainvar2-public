@@ -1,0 +1,3 @@
+sample,fastq_1,fastq_2
+reviewer_sample_1,tests/fixtures/fastq/reviewer_sample_1_R1.fastq.gz,tests/fixtures/fastq/reviewer_sample_1_R2.fastq.gz
+reviewer_sample_1,tests/fixtures/fastq/reviewer_sample_1_R1.fastq.gz,tests/fixtures/fastq/reviewer_sample_1_R2.fastq.gz

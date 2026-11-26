@@ -1,0 +1,31 @@
+name: gatk4_mergevcfs
+description: Merge ordered per-contig VCFs into one cohort VCF
+keywords: [gatk4, mergevcfs, vcf]
+tools:
+  - gatk4:
+      description: Genome Analysis Toolkit
+      homepage: https://gatk.broadinstitute.org/
+      documentation: https://gatk.broadinstitute.org/hc/en-us/articles/360036490452-MergeVcfs-Picard
+      license: BSD-3-Clause
+input:
+  - meta:
+      type: map
+      description: Cohort metadata containing `id`
+  - vcfs:
+      type: file
+      description: Ordered per-contig VCFs
+  - vcf_indexes:
+      type: file
+      description: Indexes corresponding one-to-one with the VCF list
+  - dict:
+      type: file
+      description: GRCh38 sequence dictionary
+output:
+  - vcf:
+      type: tuple
+      description: Cohort metadata, merged VCF, and tabix index
+      pattern: "*.vcf.gz{,.tbi}"
+  - versions:
+      type: file
+      description: Software version record
+      pattern: versions.yml

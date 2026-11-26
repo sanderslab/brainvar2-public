@@ -1,0 +1,6 @@
+SubjectID	matching_WGS_library	ConfirmedID_WGS	Usable_DNA
+reviewer_donor_1	reviewer_wgs_1	Yes	Yes
+reviewer_donor_2	reviewer_wgs_3	Yes	Yes
+reviewer_donor_3	reviewer_wgs_4	Yes	Yes
+reviewer_donor_4	reviewer_wgs_5	Yes	Yes
+reviewer_donor_5		No	No

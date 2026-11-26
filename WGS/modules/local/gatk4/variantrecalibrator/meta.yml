@@ -1,0 +1,62 @@
+name: gatk4_variantrecalibrator
+description: Train an SNP or INDEL variant quality score recalibration model
+keywords: [gatk4, vqsr, variantrecalibrator]
+tools:
+  - gatk4:
+      description: Genome Analysis Toolkit
+      homepage: https://gatk.broadinstitute.org/
+      documentation: https://gatk.broadinstitute.org/hc/en-us/articles/360036510892-VariantRecalibrator
+      license: BSD-3-Clause
+input:
+  - meta:
+      type: map
+      description: Cohort metadata containing `id`
+  - vcf:
+      type: file
+      description: Cohort VCF used to train the model
+  - vcf_index:
+      type: file
+      description: Tabix index for the cohort VCF
+  - resources:
+      type: file
+      description: VQSR training and truth VCFs
+  - resource_indexes:
+      type: file
+      description: Indexes corresponding one-to-one with VQSR resource VCFs
+  - resource_specs:
+      type: list
+      description: Labels, roles, and priors corresponding to resource files
+  - fasta:
+      type: file
+      description: GRCh38 reference FASTA
+  - fai:
+      type: file
+      description: FASTA index
+  - dict:
+      type: file
+      description: Reference sequence dictionary
+  - mode:
+      type: string
+      description: SNP or INDEL
+  - annotations:
+      type: list
+      description: GATK annotation names used by the VQSR model
+  - tranches:
+      type: list
+      description: Truth-sensitivity tranche values
+  - max_gaussians:
+      type: integer
+      description: Optional maximum Gaussian components
+output:
+  - model:
+      type: tuple
+      description: Cohort metadata, recalibration table, index, and tranche file
+      pattern: "*.{recal,recal.idx,tranches}"
+  - plots:
+      type: file
+      description: Optional GATK model plotting script
+      pattern: "*plots.R"
+  - versions:
+      type: file
+      description: Software version record
+      pattern: versions.yml

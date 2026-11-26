@@ -1,0 +1,13 @@
+sample,contig,gvcf,gvcf_index
+reviewer_wgs_1,chr1,/controlled/reviewer_wgs_1.g.vcf.gz,/controlled/reviewer_wgs_1.g.vcf.gz.tbi
+reviewer_wgs_1,chr2,/controlled/reviewer_wgs_1.g.vcf.gz,/controlled/reviewer_wgs_1.g.vcf.gz.tbi
+reviewer_wgs_2,chr1,/controlled/reviewer_wgs_2.g.vcf.gz,/controlled/reviewer_wgs_2.g.vcf.gz.tbi
+reviewer_wgs_2,chr2,/controlled/reviewer_wgs_2.g.vcf.gz,/controlled/reviewer_wgs_2.g.vcf.gz.tbi
+reviewer_wgs_3,chr1,/controlled/reviewer_wgs_3.g.vcf.gz,/controlled/reviewer_wgs_3.g.vcf.gz.tbi
+reviewer_wgs_3,chr2,/controlled/reviewer_wgs_3.g.vcf.gz,/controlled/reviewer_wgs_3.g.vcf.gz.tbi
+reviewer_wgs_4,chr1,/controlled/reviewer_wgs_4.g.vcf.gz,/controlled/reviewer_wgs_4.g.vcf.gz.tbi
+reviewer_wgs_4,chr2,/controlled/reviewer_wgs_4.g.vcf.gz,/controlled/reviewer_wgs_4.g.vcf.gz.tbi
+reviewer_wgs_5,chr1,/controlled/reviewer_wgs_5.g.vcf.gz,/controlled/reviewer_wgs_5.g.vcf.gz.tbi
+reviewer_wgs_5,chr2,/controlled/reviewer_wgs_5.g.vcf.gz,/controlled/reviewer_wgs_5.g.vcf.gz.tbi
+reviewer_wgs_6,chr1,/controlled/reviewer_wgs_6.g.vcf.gz,/controlled/reviewer_wgs_6.g.vcf.gz.tbi
+reviewer_wgs_6,chr2,/controlled/reviewer_wgs_6.g.vcf.gz,/controlled/reviewer_wgs_6.g.vcf.gz.tbi

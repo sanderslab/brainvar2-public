@@ -1,0 +1,21 @@
+import urllib3
+
+# Disable warnings for S3 HTTPS certificate...
+urllib3.disable_warnings()
+
+storage:
+    provider="s3"
+
+configfile: "../config/config.yaml"
+
+##### load rules #####
+
+include: "rules/salmon_counts.smk"
+include: "rules/tximport.smk"
+include: "rules/htseq_count.smk"
+
+##### target rules #####
+
+rule all:
+    input:
+        rules.tximport.output

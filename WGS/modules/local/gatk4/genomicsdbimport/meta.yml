@@ -1,0 +1,31 @@
+name: gatk4_genomicsdbimport
+description: Import per-sample genomic VCFs into one GenomicsDB workspace per contig
+keywords: [gatk4, genomicsdb, gvcf, joint-calling]
+tools:
+  - gatk4:
+      description: Genome Analysis Toolkit
+      homepage: https://gatk.broadinstitute.org/
+      documentation: https://gatk.broadinstitute.org/hc/en-us/articles/360036729471-GenomicsDBImport
+      license: BSD-3-Clause
+input:
+  - meta:
+      type: map
+      description: Contig metadata containing `contig`
+  - samples:
+      type: list
+      description: Sample identifiers aligned one-to-one with the gVCF list
+  - gvcfs:
+      type: file
+      description: Per-sample genomic VCFs
+  - gvcf_indexes:
+      type: file
+      description: Indexes corresponding one-to-one with the gVCF list
+output:
+  - genomicsdb:
+      type: tuple
+      description: Contig metadata and per-contig GenomicsDB workspace
+      pattern: "*.genomicsdb"
+  - versions:
+      type: file
+      description: Software version record
+      pattern: versions.yml

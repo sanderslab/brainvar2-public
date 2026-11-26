@@ -1,0 +1,8 @@
+name: salmon
+channels: 
+- bioconda
+- conda-forge
+dependencies:
+  - salmon
+  - samtools
+prefix: /opt/conda/envs/snakemake/envs/salmon

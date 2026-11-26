@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Please cite this software and the associated BrainVar2 publication."
+title: "brainvar2_mbv"
+type: software
+authors:
+  - family-names: "Lalli"
+    given-names: "Joseph"
+version: "0.1.0"
+date-released: "YYYY-MM-DD"
+repository-code: "https://github.com/OWNER/brainvar2_mbv"
+license: MIT
+# Add the approved author order, publication identifiers, and Zenodo DOI before release.

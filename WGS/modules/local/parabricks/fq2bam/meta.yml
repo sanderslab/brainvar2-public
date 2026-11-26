@@ -1,0 +1,37 @@
+name: parabricks_fq2bam
+description: GPU-accelerated BWA-MEM alignment, duplicate marking, and base recalibration
+keywords: [alignment, bwa-mem, cram, bqsr, gpu]
+tools:
+  - parabricks:
+      description: NVIDIA Clara Parabricks GPU-accelerated genomics toolkit
+      homepage: https://docs.nvidia.com/clara/parabricks/latest/
+      documentation: https://docs.nvidia.com/clara/parabricks/latest/documentation/tooldocs/man_fq2bam.html
+      license: Proprietary
+input:
+  - meta:
+      type: map
+      description: Sample metadata containing a unique `id`
+  - reads:
+      type: file
+      description: One or more paired FASTQ chunks for the same sample
+  - ref_dir:
+      type: directory
+      description: Parabricks-ready GRCh38 reference directory
+  - fasta_basename:
+      type: string
+      description: Reference FASTA basename within `ref_dir`
+  - known_sites:
+      type: file
+      description: Known-sites VCF files
+  - known_site_indexes:
+      type: file
+      description: Tabix indexes corresponding one-to-one with known-sites VCFs
+output:
+  - cram:
+      type: tuple
+      description: Sample metadata, recalibrated CRAM/CRAI, recalibration table, and duplicate metrics
+      pattern: "*.{cram,cram.crai,recal.table,duplicate_metrics.txt}"
+  - versions:
+      type: file
+      description: Software version record
+      pattern: versions.yml

@@ -1,0 +1,40 @@
+name: gatk4_genotypegvcfs
+description: Jointly genotype a per-contig GenomicsDB workspace
+keywords: [gatk4, genotypegvcfs, joint-calling]
+tools:
+  - gatk4:
+      description: Genome Analysis Toolkit
+      homepage: https://gatk.broadinstitute.org/
+      documentation: https://gatk.broadinstitute.org/hc/en-us/articles/360036820431-GenotypeGVCFs
+      license: BSD-3-Clause
+input:
+  - meta:
+      type: map
+      description: Contig metadata containing `contig`
+  - genomicsdb:
+      type: directory
+      description: Per-contig GenomicsDB workspace
+  - fasta:
+      type: file
+      description: GRCh38 reference FASTA
+  - fai:
+      type: file
+      description: FASTA index
+  - dict:
+      type: file
+      description: Reference sequence dictionary
+  - dbsnp:
+      type: file
+      description: dbSNP VCF
+  - dbsnp_index:
+      type: file
+      description: Tabix index for dbSNP
+output:
+  - vcf:
+      type: tuple
+      description: Contig metadata, jointly genotyped VCF, and tabix index
+      pattern: "*.raw.vcf.gz{,.tbi}"
+  - versions:
+      type: file
+      description: Software version record
+      pattern: versions.yml

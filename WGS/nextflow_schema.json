@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/JosephLalli/Brainvar2_wgs/main/nextflow_schema.json",
+  "title": "BrainVar2 WGS workflow parameters",
+  "type": "object",
+  "properties": {
+    "stage": {
+      "type": "string",
+      "enum": ["parabricks", "joint"],
+      "description": "Production stage to execute"
+    },
+    "input": {
+      "type": "string",
+      "format": "file-path",
+      "description": "Stage-specific CSV samplesheet; Parabricks samples may span repeated rows with distinct FASTQ pairs"
+    },
+    "outdir": {
+      "type": "string",
+      "format": "directory-path",
+      "default": "results"
+    },
+    "cohort": {
+      "type": "string",
+      "default": "brainvar2"
+    },
+    "contigs": {
+      "type": "string",
+      "description": "Ordered comma-separated GRCh38 contigs"
+    },
+    "parabricks_refdir": {
+      "type": ["string", "null"],
+      "format": "directory-path"
+    },
+    "fasta_basename": {
+      "type": "string",
+      "default": "Homo_sapiens_assembly38.fasta"
+    },
+    "known_sites": {
+      "type": ["string", "null"],
+      "description": "Comma-separated known-sites VCFs for Parabricks BQSR"
+    },
+    "known_sites_indexes": {
+      "type": ["string", "null"],
+      "description": "Comma-separated tabix indexes corresponding to known_sites"
+    },
+    "fasta": {"type": ["string", "null"], "format": "file-path"},
+    "fai": {"type": ["string", "null"], "format": "file-path"},
+    "dict": {"type": ["string", "null"], "format": "file-path"},
+    "dbsnp": {"type": ["string", "null"], "format": "file-path"},
+    "dbsnp_index": {"type": ["string", "null"], "format": "file-path"},
+    "hapmap": {"type": ["string", "null"], "format": "file-path"},
+    "hapmap_index": {"type": ["string", "null"], "format": "file-path"},
+    "omni": {"type": ["string", "null"], "format": "file-path"},
+    "omni_index": {"type": ["string", "null"], "format": "file-path"},
+    "one_thousand_g": {"type": ["string", "null"], "format": "file-path"},
+    "one_thousand_g_index": {"type": ["string", "null"], "format": "file-path"},
+    "axiom": {"type": ["string", "null"], "format": "file-path"},
+    "axiom_index": {"type": ["string", "null"], "format": "file-path"},
+    "mills": {"type": ["string", "null"], "format": "file-path"},
+    "mills_index": {"type": ["string", "null"], "format": "file-path"}
+  },
+  "required": ["stage", "input"],
+  "additionalProperties": false
+}

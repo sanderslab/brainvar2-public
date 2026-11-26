@@ -1,0 +1,37 @@
+name: parabricks_haplotypecaller
+description: GPU-accelerated germline calling in genomic VCF mode
+keywords: [gatk, haplotypecaller, gvcf, gpu]
+tools:
+  - parabricks:
+      description: NVIDIA Clara Parabricks GPU-accelerated genomics toolkit
+      homepage: https://docs.nvidia.com/clara/parabricks/latest/
+      documentation: https://docs.nvidia.com/clara/parabricks/latest/documentation/tooldocs/man_haplotypecaller.html
+      license: Proprietary
+input:
+  - meta:
+      type: map
+      description: Sample metadata containing a unique `id`
+  - cram:
+      type: file
+      description: Recalibrated CRAM
+  - crai:
+      type: file
+      description: CRAM index
+  - recal:
+      type: file
+      description: BQSR recalibration table
+  - ref_dir:
+      type: directory
+      description: Parabricks-ready GRCh38 reference directory
+  - fasta_basename:
+      type: string
+      description: Reference FASTA basename within `ref_dir`
+output:
+  - gvcf:
+      type: tuple
+      description: Sample metadata, genomic VCF, and tabix index
+      pattern: "*.g.vcf.gz{,.tbi}"
+  - versions:
+      type: file
+      description: Software version record
+      pattern: versions.yml

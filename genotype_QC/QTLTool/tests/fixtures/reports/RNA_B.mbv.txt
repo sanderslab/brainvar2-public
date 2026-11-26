@@ -1,0 +1,4 @@
+SampleID n_geno_missing n_het_total n_hom_total n_het_covered n_hom_covered n_het_consistent n_hom_consistent perc_het_consistent perc_hom_consistent n_het_in_ase
+DONOR_A 0 100 100 80 90 76 54 0.950 0.6000000 0
+DONOR_B 0 100 100 80 90 68 81 0.850 0.9000000 0
+DONOR_C 0 100 100 80 90 60 72 0.750 0.8000000 0

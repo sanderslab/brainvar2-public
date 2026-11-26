@@ -1,0 +1,4 @@
+workflow_name: brainvar
+output_bucket: brainvar2/bulk_RNA_counts
+salmon_index: /data/salmon_index
+annotation_gtf: /data/GRCh38-references/gencode.v41.annotation.gtf

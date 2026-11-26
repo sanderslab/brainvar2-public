@@ -1,0 +1,8 @@
+name: htseq
+channels: 
+- bioconda
+- conda-forge
+dependencies:
+  - htseq
+  - samtools
+prefix: /opt/conda/envs/snakemake/envs/htseq

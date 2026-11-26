@@ -1,0 +1,37 @@
+results/
+results-*/
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+
+# Controlled human sequencing data and analysis products.
+private/
+_internal/
+*.bam
+*.bai
+*.cram
+*.crai
+*.sam
+*.vcf
+*.vcf.gz
+*.bcf
+*.tbi
+*.csi
+*.mbv.txt
+*.mbv.log
+mbv_all.tsv
+mbv_all.tsv.gz
+figures/
+*.ppt
+*.pptx
+
+# Curated, publication-approved decision figures are release documentation.
+!docs/decision_records/figures/
+!docs/decision_records/figures/**
+
+# Synthetic text reports contain no participant data.
+!tests/fixtures/reports/*.mbv.txt
+
+.DS_Store
+*.swp
+*~
